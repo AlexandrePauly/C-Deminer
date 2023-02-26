@@ -1,0 +1,409 @@
+\hypertarget{fonctions_8c}{}\doxysection{fonctions.\+c File Reference}
+\label{fonctions_8c}\index{fonctions.c@{fonctions.c}}
+
+
+Démineur.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fonctions.\+h\char`\"{}}\newline
+Include dependency graph for fonctions.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fonctions_8c_a0b58e6e2bddf421f7e879765960937a4}\label{fonctions_8c_a0b58e6e2bddf421f7e879765960937a4}} 
+\#define {\bfseries E\+R\+R\+E\+U\+R\+\_\+\+S\+A\+I\+S\+IE}~-\/1
+\item 
+\mbox{\Hypertarget{fonctions_8c_a1b6cfcb42223a1c4907e924894f81466}\label{fonctions_8c_a1b6cfcb42223a1c4907e924894f81466}} 
+\#define {\bfseries E\+R\+R\+E\+U\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fonctions_8c_ac9e8ea279c4cb2682339c8c4d11d1665}{Saisie\+Entier}} ()
+\begin{DoxyCompactList}\small\item\em Vérification de saisie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a03dc47f7955d0519d223dc751480d5e8}{int\+Verif\+Allocation}} (int $\ast$pointeur)
+\begin{DoxyCompactList}\small\item\em Vérification de l\textquotesingle{}allocation de mémoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_aed2cf294981bdd0f9b6c41c138bdf748}{struct\+Verif\+Allocation}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pointeur)
+\begin{DoxyCompactList}\small\item\em Vérification de l\textquotesingle{}allocation de mémoire. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$ \mbox{\hyperlink{fonctions_8c_a77285d53979af9e2a3c2f1e6c0da606c}{creer\+Plateau}} (int int\+\_\+dimensions, int int\+\_\+nb\+Mines\+Restantes)
+\begin{DoxyCompactList}\small\item\em Création du plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a2d5b44f3c6867db8f2bb76a6632f3a4a}{init\+Grille}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Initialisation du plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_aa56acb7ff1d6fb73f6f209db9557c3cb}{Mines\+Voisines}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Placement des cases voisines d\textquotesingle{}une mine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a0e286e2bc848bd3913403f27f32d3c17}{afficher\+Grille}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Affichage du plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_aa40029882aad244199aa1605f6e25bb0}{jeu}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau, int int\+\_\+nb\+Mines\+Restantes)
+\begin{DoxyCompactList}\small\item\em Placement des mines. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fonctions_8c_a4cf8aa2d92921ba62266b33f7ed46bdc}{Verif\+Victoire}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueuer a gagné \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fonctions_8c_a1273538eb89a72b349ceeb847a28bf0b}\label{fonctions_8c_a1273538eb89a72b349ceeb847a28bf0b}} 
+int {\bfseries Verif\+Jeu} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau, int i, int j, int int\+\_\+nb\+Mines\+Restantes)
+\item 
+void \mbox{\hyperlink{fonctions_8c_ac1e36b19ba001f8c579e4940e75a506a}{decouvrement\+Cases}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau, int N, int i, int j)
+\begin{DoxyCompactList}\small\item\em Découvrement des cases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a499a16eca2c8df12df70c9f42687a17c}{placement\+Drapeau}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Placement des drapeaux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a676274fa16603a42f7a4a9e5827c83e6}{tour\+De\+Jeu}} (struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$pstruct\+\_\+plateau, int $\ast$int\+\_\+fin, int int\+\_\+nb\+Mines\+Restantes)
+\begin{DoxyCompactList}\small\item\em Tour de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8c_a42c9f1bdb3de218b68a1d17038675c61}{Demineur}} (void)
+\begin{DoxyCompactList}\small\item\em Jeu du démineur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Démineur. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 décembre 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fonctions_8c_a0e286e2bc848bd3913403f27f32d3c17}\label{fonctions_8c_a0e286e2bc848bd3913403f27f32d3c17}} 
+\index{fonctions.c@{fonctions.c}!afficherGrille@{afficherGrille}}
+\index{afficherGrille@{afficherGrille}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{afficherGrille()}{afficherGrille()}}
+{\footnotesize\ttfamily void afficher\+Grille (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Affichage du plateau de jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a77285d53979af9e2a3c2f1e6c0da606c}\label{fonctions_8c_a77285d53979af9e2a3c2f1e6c0da606c}} 
+\index{fonctions.c@{fonctions.c}!creerPlateau@{creerPlateau}}
+\index{creerPlateau@{creerPlateau}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{creerPlateau()}{creerPlateau()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$ creer\+Plateau (\begin{DoxyParamCaption}\item[{int}]{int\+\_\+dimensions,  }\item[{int}]{int\+\_\+nb\+Mines\+Restantes }\end{DoxyParamCaption})}
+
+
+
+Création du plateau de jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em int\+\_\+dimensions} & = Dimensions du plateau \\
+\hline
+{\em int\+\_\+nb\+Mines\+Restantes} & = Nombre de mines \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s\+Plateau quand tout s\textquotesingle{}est bien passé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8c_ac1e36b19ba001f8c579e4940e75a506a}\label{fonctions_8c_ac1e36b19ba001f8c579e4940e75a506a}} 
+\index{fonctions.c@{fonctions.c}!decouvrementCases@{decouvrementCases}}
+\index{decouvrementCases@{decouvrementCases}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{decouvrementCases()}{decouvrementCases()}}
+{\footnotesize\ttfamily void decouvrement\+Cases (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau,  }\item[{int}]{N,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Découvrement des cases. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ptt\+Demplateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+{\em N} & = Dimensions du plateau \\
+\hline
+{\em i} & = Lignes du plateau \\
+\hline
+{\em j} & = Colonnes du plateau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a42c9f1bdb3de218b68a1d17038675c61}\label{fonctions_8c_a42c9f1bdb3de218b68a1d17038675c61}} 
+\index{fonctions.c@{fonctions.c}!Demineur@{Demineur}}
+\index{Demineur@{Demineur}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{Demineur()}{Demineur()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structDemineur}{Demineur}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Jeu du démineur. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15 janvier 2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{fonctions_8c_a2d5b44f3c6867db8f2bb76a6632f3a4a}\label{fonctions_8c_a2d5b44f3c6867db8f2bb76a6632f3a4a}} 
+\index{fonctions.c@{fonctions.c}!initGrille@{initGrille}}
+\index{initGrille@{initGrille}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{initGrille()}{initGrille()}}
+{\footnotesize\ttfamily void init\+Grille (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Initialisation du plateau de jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a03dc47f7955d0519d223dc751480d5e8}\label{fonctions_8c_a03dc47f7955d0519d223dc751480d5e8}} 
+\index{fonctions.c@{fonctions.c}!intVerifAllocation@{intVerifAllocation}}
+\index{intVerifAllocation@{intVerifAllocation}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{intVerifAllocation()}{intVerifAllocation()}}
+{\footnotesize\ttfamily void int\+Verif\+Allocation (\begin{DoxyParamCaption}\item[{int $\ast$}]{pointeur }\end{DoxyParamCaption})}
+
+
+
+Vérification de l\textquotesingle{}allocation de mémoire. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pointeur} & = Pointeur d\textquotesingle{}entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_aa40029882aad244199aa1605f6e25bb0}\label{fonctions_8c_aa40029882aad244199aa1605f6e25bb0}} 
+\index{fonctions.c@{fonctions.c}!jeu@{jeu}}
+\index{jeu@{jeu}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{jeu()}{jeu()}}
+{\footnotesize\ttfamily void jeu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau,  }\item[{int}]{int\+\_\+nb\+Mines\+Restantes }\end{DoxyParamCaption})}
+
+
+
+Placement des mines. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+{\em int\+\_\+nb\+Mines\+Restantes} & = Nombre de mines initialisées \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_aa56acb7ff1d6fb73f6f209db9557c3cb}\label{fonctions_8c_aa56acb7ff1d6fb73f6f209db9557c3cb}} 
+\index{fonctions.c@{fonctions.c}!MinesVoisines@{MinesVoisines}}
+\index{MinesVoisines@{MinesVoisines}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{MinesVoisines()}{MinesVoisines()}}
+{\footnotesize\ttfamily void Mines\+Voisines (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Placement des cases voisines d\textquotesingle{}une mine. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a499a16eca2c8df12df70c9f42687a17c}\label{fonctions_8c_a499a16eca2c8df12df70c9f42687a17c}} 
+\index{fonctions.c@{fonctions.c}!placementDrapeau@{placementDrapeau}}
+\index{placementDrapeau@{placementDrapeau}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{placementDrapeau()}{placementDrapeau()}}
+{\footnotesize\ttfamily void placement\+Drapeau (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Placement des drapeaux. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_ac9e8ea279c4cb2682339c8c4d11d1665}\label{fonctions_8c_ac9e8ea279c4cb2682339c8c4d11d1665}} 
+\index{fonctions.c@{fonctions.c}!SaisieEntier@{SaisieEntier}}
+\index{SaisieEntier@{SaisieEntier}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{SaisieEntier()}{SaisieEntier()}}
+{\footnotesize\ttfamily int Saisie\+Entier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérification de saisie. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 décembre 2022 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+int\+\_\+nb si tout s\textquotesingle{}est bien passé
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 décembre 2022 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+int\+\_\+nb si tout s\textquotesingle{}est bien passé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8c_aed2cf294981bdd0f9b6c41c138bdf748}\label{fonctions_8c_aed2cf294981bdd0f9b6c41c138bdf748}} 
+\index{fonctions.c@{fonctions.c}!structVerifAllocation@{structVerifAllocation}}
+\index{structVerifAllocation@{structVerifAllocation}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{structVerifAllocation()}{structVerifAllocation()}}
+{\footnotesize\ttfamily void struct\+Verif\+Allocation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pointeur }\end{DoxyParamCaption})}
+
+
+
+Vérification de l\textquotesingle{}allocation de mémoire. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pointeur} & = Pointeur d\textquotesingle{}entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a676274fa16603a42f7a4a9e5827c83e6}\label{fonctions_8c_a676274fa16603a42f7a4a9e5827c83e6}} 
+\index{fonctions.c@{fonctions.c}!tourDeJeu@{tourDeJeu}}
+\index{tourDeJeu@{tourDeJeu}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{tourDeJeu()}{tourDeJeu()}}
+{\footnotesize\ttfamily void tour\+De\+Jeu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau,  }\item[{int $\ast$}]{int\+\_\+fin,  }\item[{int}]{int\+\_\+nb\+Mines\+Restantes }\end{DoxyParamCaption})}
+
+
+
+Tour de jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+{\em int\+\_\+fin} & = Pointeur vers un entier (la valeur de l\textquotesingle{}entier renseigne sur les conditions de fin de partie) \\
+\hline
+{\em int\+\_\+nb\+Mines\+Restantes} & = Nombre de mines initialisées \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8c_a4cf8aa2d92921ba62266b33f7ed46bdc}\label{fonctions_8c_a4cf8aa2d92921ba62266b33f7ed46bdc}} 
+\index{fonctions.c@{fonctions.c}!VerifVictoire@{VerifVictoire}}
+\index{VerifVictoire@{VerifVictoire}!fonctions.c@{fonctions.c}}
+\doxysubsubsection{\texorpdfstring{VerifVictoire()}{VerifVictoire()}}
+{\footnotesize\ttfamily int Verif\+Victoire (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{pstruct\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueuer a gagné 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Pauly \href{mailto:alexandre.pauly@cy-tech.fr}{\texttt{ alexandre.\+pauly@cy-\/tech.\+fr}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 Premier jet 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2 janvier 2023 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pstruct\+\_\+plateau} & = \mbox{\hyperlink{structPlateau}{Plateau}} de jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+\_\+cpt quand tout s\textquotesingle{}est bien passé 
+\end{DoxyReturn}
