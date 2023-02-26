@@ -1,0 +1,9 @@
+The whole deminer game is compiled from a makefile, so just type the following command:
+
+make
+
+Then, for the execution of the Demineur :
+
+./exe
+
+lines 351 to 474 : tags to remove (or add) to display (or not) another grid allowing to test the game more easily
